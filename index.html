@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creativo | The Art of Flow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 영문 폰트와 최고급 한글 폰트(Pretendard) 조합 */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,600&family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap');
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        
+        body { 
+            /* 폰트를 일정하게 유지 */
+            font-family: 'Plus Jakarta Sans', 'Pretendard', sans-serif;
+            background-color: #030303;
+            color: #EDEDED;
+            overflow-x: hidden;
+            word-break: keep-all; /* 한글 단어 끊김 방지 */
+        }
+
+        /* 영문 이니셜에만 사용할 예술적 폰트 */
+        .font-serif-art {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient {
+            background: linear-gradient(-45deg, #120f2b, #1a144e, #251b7a, #030303);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+        .animate-float {
+            animation: float 10s ease-in-out infinite;
+        }
+        
+        ::selection {
+            background: #251b7a;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="antialiased animate-gradient">
+
+    <div id="blob1" class="fixed -top-32 -left-32 w-96 h-96 bg-[#251b7a] rounded-full filter blur-[100px] opacity-30 animate-float" style="animation-delay: 1s;"></div>
+    <div id="blob2" class="fixed -bottom-32 -right-32 w-96 h-96 bg-[#1a144e] rounded-full filter blur-[100px] opacity-40 animate-float" style="animation-delay: 3s;"></div>
+
+    <header class="relative z-10 max-w-[90rem] mx-auto p-10 md:p-16 flex justify-between items-center">
+        <div class="text-3xl font-light tracking-[-0.07em]">
+            <span class="font-serif-art">C</span>reativo.
+        </div>
+        <a href="mailto:contact@creativo.com" class="text-xs font-medium uppercase tracking-[0.2em] group border-b border-transparent hover:border-ededed pb-1 transition">
+            Connect
+        </a>
+    </header>
+
+    <section class="relative z-10 min-h-[80vh] flex flex-col justify-center px-6 md:px-20 max-w-[100rem] mx-auto overflow-hidden mb-32">
+        <p class="text-gray-500 font-medium text-sm tracking-[0.3em] uppercase mb-6 pl-4 border-l-2 border-ededed/10">Next Gen Digital Studio</p>
+        <h1 class="text-8xl md:text-[160px] font-extrabold mb-16 tracking-tighter leading-[0.85] select-none">
+            WE ART <br> THE <span class="text-gray-700">FLOW.</span>
+        </h1>
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+            <p class="max-w-xl text-lg text-gray-400 font-light leading-relaxed">
+                Creativo는 낡고 복잡한 시스템을 해체하고, 흐르는 듯한 사용자 경험을 <span class="text-white font-semibold">조각</span>합니다. 우리의 소프트웨어는 단순한 도구가 아닌, 디지털 공간에 남기는 예술적 흔적입니다.
+            </p>
+            <a href="#litflo" class="group relative inline-block mt-4 md:mt-0">
+                <span class="absolute -bottom-1 left-0 h-0.5 bg-ededed transition-all w-0 group-hover:w-full"></span>
+                <span class="text-lg font-bold">Discover LitFlo →</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="litflo" class="relative z-10 px-6 md:px-20 py-40 bg-[#ededed] text-[#030303] rounded-t-[5rem] overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-16 items-start mb-24">
+                
+                <div class="md:col-span-7 pr-0 md:pr-10">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-16 h-16 bg-[#030303] text-[#ededed] rounded-full flex items-center justify-center font-bold text-3xl shadow-2xl shrink-0">L</div>
+                        <h2 class="text-5xl font-extrabold tracking-tight leading-none">LitFlo.<br><span class="font-light text-gray-600 text-3xl">The Art of Management.</span></h2>
+                    </div>
+                    
+                    <p class="text-[#444444] text-xl mb-16 leading-relaxed">
+                        유통과 주문의 워크플로우를 <span class="text-black font-bold">예술적인 경험</span>으로 재정의합니다. LitFlo는 당신의 비즈니스가 물 흐르듯 유려하게 움직이도록 돕는 지능형 코어 툴입니다.
+                    </p>
+                    
+                    <div class="space-y-12">
+                        <div class="relative pl-8 border-l border-[#030303]/20 group hover:border-[#030303] transition-colors">
+                            <span class="absolute -left-[5px] top-1 w-2.5 h-2.5 bg-[#030303] rounded-full scale-50 group-hover:scale-100 transition-transform"></span>
+                            <h4 class="text-2xl font-bold mb-3 tracking-tight">I. Seamless Curation <span class="text-gray-500 text-sm ml-2 font-normal tracking-normal">웹 스크랩 & 즉시 주문</span></h4>
+                            <p class="text-[#555555] leading-relaxed text-lg">
+                                방대한 웹 검색 결과를 즉각적으로 스크랩하여 리스트화하고, 수집된 데이터를 바탕으로 공급처 발주까지 끊김 없이 연결합니다.
+                            </p>
+                        </div>
+
+                        <div class="relative pl-8 border-l border-[#030303]/20 group hover:border-[#030303] transition-colors">
+                            <span class="absolute -left-[5px] top-1 w-2.5 h-2.5 bg-[#030303] rounded-full scale-50 group-hover:scale-100 transition-transform"></span>
+                            <h4 class="text-2xl font-bold mb-3 tracking-tight">II. Algorithmic Routing <span class="text-gray-500 text-sm ml-2 font-normal tracking-normal">지능형 주문처 최적화</span></h4>
+                            <p class="text-[#555555] leading-relaxed text-lg">
+                                설정된 룰에 따라 매입처의 판매 조건과 상황을 실시간으로 분석하여, 가장 완벽하고 효율적인 주문 경로를 시스템이 설계합니다.
+                            </p>
+                        </div>
+
+                        <div class="relative pl-8 border-l border-[#030303]/20 group hover:border-[#030303] transition-colors">
+                            <span class="absolute -left-[5px] top-1 w-2.5 h-2.5 bg-[#030303] rounded-full scale-50 group-hover:scale-100 transition-transform"></span>
+                            <h4 class="text-2xl font-bold mb-3 tracking-tight">III. Instinctive Tagging <span class="text-gray-500 text-sm ml-2 font-normal tracking-normal">바코드 후킹 기반 스마트 넘버링</span></h4>
+                            <p class="text-[#555555] leading-relaxed text-lg">
+                                수많은 번호표 사이를 헤매며 시간을 낭비하지 마세요. PC에 바코드가 리딩되는 즉시 지금 내 손에 있는 바로 그 책의 번호표만 출력해 냅니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-5 relative mt-16 md:mt-0 sticky top-20">
+                    <div class="aspect-[3/4] bg-white rounded-[2.5rem] relative overflow-hidden group shadow-[-20px_20px_60px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] border border-gray-100 flex flex-col justify-center items-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#251b7a] to-[#1a144e] opacity-5 group-hover:opacity-10 transition-opacity duration-500"></div>
+                        <div class="w-3/4 space-y-4 z-10 opacity-30 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="h-8 bg-gray-200 rounded-lg w-1/2 mb-8"></div>
+                            <div class="h-4 bg-gray-200 rounded-full w-full"></div>
+                            <div class="h-4 bg-gray-200 rounded-full w-5/6"></div>
+                            <div class="h-4 bg-gray-200 rounded-full w-4/6"></div>
+                            <div class="mt-8 flex gap-2">
+                                <div class="h-10 w-1/3 bg-gray-200 rounded-xl"></div>
+                                <div class="h-10 w-2/3 bg-gray-900 rounded-xl"></div>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center font-black text-[120px] text-black/[0.03] select-none leading-none pointer-events-none">LIT<br>FLO</div>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-[#251b7a] rounded-full filter blur-[60px] opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-32">
+                <a href="mailto:contact@creativo.com" class="inline-block px-12 py-5 bg-[#030303] text-[#ededed] rounded-full font-extrabold text-lg hover:bg-[#251b7a] transition-colors shadow-[0_20px_50px_rgba(0,0,0,0.2)]">
+                    Request a Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative z-10 py-40 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+            <h3 class="text-5xl font-extrabold tracking-tight">Future Canvas</h3>
+            <span class="text-gray-500 font-bold uppercase tracking-[0.3em] text-xs">Creativo / 2026</span>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="group border border-ededed/10 p-12 rounded-[2.5rem] hover:bg-ededed/5 transition">
+                <div class="text-[#251b7a] text-4xl font-black mb-6 font-serif-art group-hover:text-ededed transition">I</div>
+                <h4 class="text-2xl font-bold mb-3">Project X</h4>
+                <p class="text-sm text-gray-500">데이터를 보는 새로운 방식. 기존 산업의 틀을 깨는 다음 혁신을 준비 중입니다.</p>
+            </div>
+            <div class="border border-dashed border-ededed/10 p-12 rounded-[2.5rem] flex items-center justify-center">
+                <span class="text-gray-600 font-medium italic underline">More to come...</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative z-10 py-32 text-center px-6 border-t border-ededed/10">
+        <h2 class="text-6xl md:text-9xl font-extrabold mb-12 select-none tracking-tighter">CREATIVO.</h2>
+        <p class="text-gray-600 mb-10 max-w-md mx-auto text-sm uppercase tracking-[0.4em] font-bold">Crafting Flow, Painting Future.</p>
+        <div class="text-xs text-gray-800">
+            &copy; 2026 Creativo Studio. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
